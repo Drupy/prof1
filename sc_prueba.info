@@ -37,4 +37,4 @@ dependencies[] = token
 dependencies[] = views
 dependencies[] = views_ui
 
-files[] = sc_prueba.profile
+;files[] = sc_prueba.profile

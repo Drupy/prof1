@@ -14,7 +14,7 @@ function drupaleasy_install() {
  * implements hook_form_FORM_ID_alter()
  */
  /*
-function drupaleasy_form_install_configure_form_alter(&$form, &$form_state) {
+function sc_prueba_form_install_configure_form_alter(&$form, &$form_state) {
   $form['site_information']['site_mail']['#default_value'] = 'pol@localhost'; 
   $form['admin_account']['account']['name']['#default_value'] = 'admin';
   $form['admin_account']['account']['mail']['#default_value'] = 'pol@localhost';
