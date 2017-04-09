@@ -1,26 +1,15 @@
 <?php
+/**
+ * @file
+ * Enables modules and site configuration for a standard site installation.
+ */
 
 /**
- * Implement hook_install().
+ * Implements hook_form_FORM_ID_alter() for install_configure_form().
  *
- * Perform actions to set up the site for this profile.
+ * Allows the profile to alter the site configuration form.
  */
-function drupaleasy_install() {
-  include_once DRUPAL_ROOT . '/profiles/standard/standard.install';
-  standard_install();
+function prof1_form_install_configure_form_alter(&$form, $form_state) {
+  // Pre-populate the site name with the server name.
+  $form['site_information']['site_name']['#default_value'] = $_SERVER['SERVER_NAME'];
 }
-
-/**
- * implements hook_form_FORM_ID_alter()
- */
- /*
-function sc_prueba_form_install_configure_form_alter(&$form, &$form_state) {
-  $form['site_information']['site_mail']['#default_value'] = 'pol@localhost'; 
-  $form['admin_account']['account']['name']['#default_value'] = 'admin';
-  $form['admin_account']['account']['mail']['#default_value'] = 'pol@localhost';
-  $form['server_settings']['site_default_country']['#default_value'] = 'US';
-  $form['server_settings']['date_default_timezone']['#default_value'] = 'America/New York';
-  $form['update_notifications']['update_status_module']['#default_value'][0] = FALSE;
-  $form['update_notifications']['update_status_module']['#default_value'][1] = FALSE;
-}
-*/
