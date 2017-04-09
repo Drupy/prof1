@@ -1,4 +1,4 @@
-name = Prof1
+name = prof1
 description = Basic installation profile for most sites. Includes commonly-used modules.
 core = 7.x
 
