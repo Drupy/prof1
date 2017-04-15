@@ -6,4 +6,4 @@ api = 2
 ;translations[] = es
 
 ;includes[] = prof1-core.make
-includes[] = drupal-org-core.make
+;includes[] = drupal-org-core.make
